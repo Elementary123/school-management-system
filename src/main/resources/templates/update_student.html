@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Student Info</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class ="container">
+  <h1>Student Management System</h1>
+  <hr>
+  <h2> Update Student Information </h2>
+  <form action="#" th:action="@{/saveStudent}" th:object="${student}" method="POST">
+
+    <input type="hidden" th:field="*{id}">
+
+    <input type="text" th:field="*{firstName}"
+           placeholder="Student First Name" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{lastName}"
+           placeholder="Student Last Name" class="form-control mb-4 col-4">
+
+    <input type="text" th:field="*{email}"
+           placeholder="Student's email" class="form-control mb-4 col-4">
+
+    <button type="submit" class="btn btn-info col-2"> Update Student</button>
+  </form>
+</div>
+
+</body>
+</html>
